@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+
 
 export default class Login extends Component {
     render() {
@@ -6,10 +8,7 @@ export default class Login extends Component {
             <div>
                 <span className="username">用户名</span><input type="text" /><br/>
                 <span className="pwd">密码</span><input type="password" /><br/>
-                <button className="login" onClick={()=>{
-                    var change=window.location.href.replace("login","home");
-                    window.location.href=change;
-                }}>登录</button>
+                <button className="login"><Link to='/home'>登录</Link></button>
             </div>
         )
     }
